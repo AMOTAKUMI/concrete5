@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+.c-clearfix:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.　c-linkoff{
+  cursor:default;
+  text-decoration:none;
+  pointer-events:none;
+}
+
+.c-mgAT{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.c-hover{
+  transition: opacity 0.3s ease;
+  &:hover{opacity:0.7;}
+}
+
+.c-embed {
+  display:block;
+  overflow:hidden;
+  position:relative;
+  height:0;
+  margin:0;
+  padding:0;
+  iframe,
+  embed,
+  object,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &--16-9{
+    padding-bottom:56.25%;
+  }
+  &--4-3{
+    padding-bottom:75%;
+  }
+}
+
+.c-hideSP{
+  body.is-sp &{
+    display:none;
+  }
+}
+
+.c-hidePC{
+  body:not(.is-sp) &{
+    display:none;
+  }
+}
+
+.c-central {
+  position: relative;
+  &__item {
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+  }
+  &--full {
+    width: 100%;
+    height: 100%;
+  }
+}
